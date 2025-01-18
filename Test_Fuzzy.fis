@@ -1,0 +1,39 @@
+[System]
+Name='Test_Fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-85 85]
+NumMFs=5
+MF1='PVDP':'trapmf',[43 53 85 85]
+MF2='PLDP':'trapmf',[11 21 43 53]
+MF3='PVS':'trapmf',[-21 -11 11 21]
+MF4='PLDN':'trapmf',[-53 -43 -21 -11]
+MF5='PVDN':'trapmf',[-85 -85 -53 -43]
+
+[Output1]
+Name='output1'
+Range=[-400 400]
+NumMFs=5
+MF1='OPFU':'trapmf',[220 260 400 400]
+MF2='OPLU':'trapmf',[60 100 220 260]
+MF3='ZDEG':'trapmf',[-100 -60 60 100]
+MF4='OPLD':'trapmf',[-260 -220 -100 -60]
+MF5='OPFD':'trapmf',[-400 -400 -260 -220]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1
