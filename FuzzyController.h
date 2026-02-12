@@ -8,7 +8,8 @@ class FuzzyController {
 public:
   enum ControllerType {
     HEIGHT_CTRL,
-    PITCH_CTRL
+    PITCH_CTRL,
+    ROLL_CTRL
   };
 
   FuzzyController(ControllerType type);
@@ -38,6 +39,12 @@ private:
   static float OutputMF_P_ZDEG(float x);
   static float OutputMF_P_OPLU(float x);
   static float OutputMF_P_OPFU(float x);
+
+  static float OutputMF_R_OPFD(float x);
+  static float OutputMF_R_OPLD(float x);
+  static float OutputMF_R_ZDEG(float x);
+  static float OutputMF_R_OPLU(float x);
+  static float OutputMF_R_OPFU(float x);
 
   enum OutputMF { OPFD, OPLD, ZDEG, OPLU, OPFU };
   enum OutputType { OUT_MF, OUT_CONST };
